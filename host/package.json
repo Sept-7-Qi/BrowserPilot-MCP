@@ -1,0 +1,19 @@
+{
+  "name": "browserpilot-mcp-host",
+  "version": "1.1.2",
+  "private": true,
+  "description": "MCP server and native messaging host for BrowserPilot MCP",
+  "type": "module",
+  "bin": {
+    "browserpilot-mcp": "./mcp-server.js"
+  },
+  "scripts": {
+    "start": "node mcp-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

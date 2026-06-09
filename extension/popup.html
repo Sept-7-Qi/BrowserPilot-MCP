@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrowserPilot MCP</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>BrowserPilot MCP</h1>
+      <span id="statusBadge" class="badge checking">检查中</span>
+    </header>
+    <section class="checks">
+      <div class="check-row" data-key="extension">
+        <span class="label">扩展</span>
+        <span class="value" id="extensionStatus">--</span>
+      </div>
+      <div class="check-row" data-key="nativeHost">
+        <span class="label">原生主机</span>
+        <span class="value" id="nativeStatus">--</span>
+      </div>
+      <div class="check-row" data-key="mcpServer">
+        <span class="label">MCP 服务</span>
+        <span class="value" id="mcpStatus">--</span>
+      </div>
+      <div class="check-row" data-key="browserAccess">
+        <span class="label">浏览器访问</span>
+        <span class="value" id="browserStatus">--</span>
+      </div>
+    </section>
+    <section class="meta">
+      <div class="meta-row">
+        <span class="label">扩展 ID</span>
+        <code id="extensionId">--</code>
+      </div>
+    </section>
+    <section class="errors" id="errorSection" style="display:none">
+      <h2>最近错误</h2>
+      <div class="error-card">
+        <div class="error-code" id="errorCode"></div>
+        <div class="error-msg" id="errorMessage"></div>
+        <div class="error-hint" id="errorHint"></div>
+      </div>
+    </section>
+    <footer>
+      <button id="btnRefresh" class="btn">刷新</button>
+      <button id="btnCopyDoctor" class="btn">复制诊断命令</button>
+      <button id="btnCopyInstall" class="btn">复制安装命令</button>
+      <button id="btnCopyMcpConfig" class="btn">复制 MCP 配置</button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build and packaged artifacts
+dist/
+build/
+*.tgz
+*.zip
+*.crx
+
+# Extension local state
+.extension-id
+
+# Secrets and certificates
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+.env
+.env.*
+
+# Local Claude / gstack state
+.claude/
+.gstack/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp

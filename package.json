@@ -1,0 +1,55 @@
+{
+  "name": "browserpilot-mcp",
+  "version": "1.1.2",
+  "description": "Browser automation MCP bridge for Claude and AI agents",
+  "private": true,
+  "bin": {
+    "browserpilot-mcp": "./bin/browserpilot-mcp.mjs"
+  },
+  "files": [
+    "bin/",
+    "extension/",
+    "scripts/",
+    "host/mcp-server.js",
+    "host/mcp-adapter.js",
+    "host/daemon.js",
+    "host/daemon-client.js",
+    "host/protocol.js",
+    "host/launch-agent.js",
+    "host/native-frame.js",
+    "host/auth-token.js",
+    "host/tools.js",
+    "host/native-host.js",
+    "host/tab-lifecycle.js",
+    "host/package.json",
+    "install.sh",
+    "一键安装.sh",
+    "quick-install.sh",
+    "package-extension.sh",
+    "uninstall.sh",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "check:npm-package": "node scripts/check-npm-package.mjs",
+    "check:daemon-contract": "node scripts/check-daemon-contract.mjs && node scripts/check-daemon-framing.mjs && node scripts/check-daemon-protocol.mjs && node scripts/check-native-framing.mjs && node scripts/check-mcp-adapter-health.mjs && node scripts/check-daemon-cli.mjs && node scripts/check-launch-agent-plist.mjs && node scripts/check-daemon-install-safety.mjs && node scripts/check-daemon-install-security.mjs && node scripts/check-daemon-cli-safety.mjs && node scripts/check-daemon-security.mjs && node scripts/check-daemon-hardening.mjs && node scripts/check-daemon-multi-adapter.mjs && node scripts/check-extension-action-status.mjs && node --check extension/background.js",
+    "check:extension": "node scripts/check-extension-action-status.mjs && node scripts/check-extension-tab-group.mjs && node scripts/check-extension-page-border.mjs && node scripts/check-extension-tab-lifecycle.mjs && node --check extension/background.js && node --check extension/content.js && node --check extension/popup.js",
+    "start": "cd host && node mcp-server.js",
+    "setup": "./install.sh",
+    "clean": "./uninstall.sh"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "keywords": [
+    "mcp",
+    "claude",
+    "browser-automation",
+    "chrome-extension"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

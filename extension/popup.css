@@ -1,0 +1,165 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f7f7f4;
+  color: #1f2933;
+}
+
+body {
+  width: 360px;
+  margin: 0;
+  background: #f7f7f4;
+}
+
+#app {
+  padding: 14px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h2 {
+  font-size: 12px;
+  margin: 0 0 6px;
+  color: #52616f;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge.ready {
+  background: #d9f8df;
+  color: #116329;
+}
+
+.badge.action-required {
+  background: #ffe4df;
+  color: #9f1d1d;
+}
+
+.badge.checking {
+  background: #e5edf8;
+  color: #24466f;
+}
+
+.checks, .meta, .errors {
+  background: #ffffff;
+  border: 1px solid #dde3ea;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.check-row, .meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.check-row:last-child, .meta-row:last-child {
+  border-bottom: 0;
+}
+
+.label {
+  color: #52616f;
+  font-size: 12px;
+}
+
+.value {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.value.ok {
+  color: #116329;
+}
+
+.value.bad {
+  color: #9f1d1d;
+}
+
+code {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 220px;
+  font-size: 11px;
+}
+
+.errors {
+  padding: 10px 12px;
+}
+
+.error-card {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.error-code {
+  font-weight: 700;
+  color: #9f1d1d;
+  margin-bottom: 4px;
+}
+
+.error-hint {
+  color: #52616f;
+  margin-top: 6px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btn {
+  border: 1px solid #cad3dd;
+  background: #ffffff;
+  color: #1f2933;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #eef3f8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root, body {
+    background: #101820;
+    color: #eef3f8;
+  }
+
+  .checks, .meta, .errors, .btn {
+    background: #17212b;
+    border-color: #2d3a46;
+    color: #eef3f8;
+  }
+
+  .check-row, .meta-row {
+    border-color: #263442;
+  }
+}
